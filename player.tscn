@@ -1,10 +1,8 @@
 [gd_scene format=3 uid="uid://cl5dcf65q3me2"]
 
 [ext_resource type="Script" uid="uid://cjxskvg5txf27" path="res://Space-Mining/player.gd" id="1_41lns"]
-[ext_resource type="Texture2D" uid="uid://dmbcjf1kndisi" path="res://Space-Mining/Icons/Spaceship.png" id="2_0hiuf"]
 [ext_resource type="Texture2D" uid="uid://b2p1r86k2at60" path="res://Space-Mining/Icons/spaceshipRight.png" id="2_mn0i3"]
-[ext_resource type="Texture2D" uid="uid://cyltopigb4jbg" path="res://Space-Mining/Icons/spaceshipFlying.png" id="3_mn0i3"]
-[ext_resource type="Texture2D" uid="uid://2udkojv42do3" path="res://Space-Mining/spaceshipFlyingRight.png" id="3_snfpc"]
+[ext_resource type="Texture2D" uid="uid://2udkojv42do3" path="res://Space-Mining/Icons/spaceshipFlyingRight.png" id="3_snfpc"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_snfpc"]
 animations = [{
@@ -17,17 +15,6 @@ animations = [{
 }],
 "loop": true,
 "name": &"right",
-"speed": 3.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("2_0hiuf")
-}, {
-"duration": 1.0,
-"texture": ExtResource("3_mn0i3")
-}],
-"loop": true,
-"name": &"up",
 "speed": 3.0
 }]
 
@@ -43,7 +30,7 @@ metadata/_edit_group_ = true
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1196232197]
 scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_snfpc")
-animation = &"up"
+animation = &"right"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1875647761]
 shape = SubResource("CapsuleShape2D_0t584")
